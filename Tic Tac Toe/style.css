@@ -1,0 +1,193 @@
+@keyframes drawX {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    50% {
+        width: 50px;
+        height: 50px;
+        opacity: 0.5;
+    }
+    100% {
+        width: 50px;
+        height: 50px;
+        opacity: 1;
+    }
+}
+
+@keyframes drawO {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(0.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes drawStroke {
+    from {
+        stroke-dashoffset: 1000;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-image: url('1234.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    font-family: sans-serif, monospace;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    text-shadow: 2px 2px 4px rgba(128, 0, 128, 0.5);
+
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 1s ease-out;
+}
+
+h1 {
+    padding: 20px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    font-style: italic;
+}
+
+.board {
+    width: 165px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 0.2rem;
+    animation: slideIn 1s ease-out;
+    margin-bottom: 30px;
+
+}
+
+.block {
+    background: black;
+    height: 50px;
+    width: 50px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 5px 20px 0 violet, 0 5px 20px 0 violet,
+                0 5px 20px 0 violet, 0 5px 20px 0 violet;
+    text-shadow: 0 5px 20px 0 violet, 0 5px 20px 0 violet;
+    transition: .3s;
+}
+.block h2 {
+    margin: 0;
+    text-shadow: 0 0 5px violet;
+}
+
+.block:hover {
+    background: violet;
+
+}
+
+
+.winner {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+    margin-bottom: 20px;
+
+}
+
+.winner h2 {
+    padding: 20px 0;
+    letter-spacing: 5px;
+}
+
+#play {
+    color: white; 
+    background: black;
+    border: none;
+    padding: 10px 20px;
+    letter-spacing: 2px;
+    transition: .5s;
+}
+
+#play:hover {
+    background: violet;
+    border-radius: 1px;
+    cursor: pointer;
+    text-decoration: underline;
+
+}
+
+
+
+h1 {
+    padding: 20px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.drawX {
+    animation: drawX 0.5s ease forwards;
+}
+
+.drawO {
+    animation: drawO 0.5s ease forwards;
+}
+
+.drawStroke {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: drawStroke 0.5s linear forwards;
+}
