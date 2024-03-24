@@ -3,6 +3,9 @@
 - This is my first project on github.
 - Thanks:)
 ## GAME:
-![Tic Tac Toe](https://github.com/sanjoshsatsangi/Tic-Tac-Toe/assets/154961435/dd10ae9a-fb3f-47b3-840d-c8765521d2c9)
-
+https://github.com/sanjoshsatsangi/Tic-Tac-Toe/assets/154961435/e823058a-9b60-4e40-bf0c-9ea964ca8ff2
 LINK:[Click To Play Game](https://sanjoshgametictactoe.netlify.app/)
+
+
+
+
